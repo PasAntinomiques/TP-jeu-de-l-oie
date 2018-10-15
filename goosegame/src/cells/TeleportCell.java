@@ -1,10 +1,10 @@
 package cells;
 
-public class TeleportPlayer extends NormalCell {
+public class TeleportCell extends NormalCell {
 	
 	private int dest;
 
-	public TeleportPlayer(int index, int dest) {
+	public TeleportCell(int index, int dest) {
 		super(index);
 		this.dest = dest;
 	}

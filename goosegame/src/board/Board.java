@@ -19,7 +19,9 @@ public abstract class Board {
 	/**
 	 * 
 	 */
-	public void initBoard() {}
+	protected void initBoard() {
+		
+	}
 
 	/**
 	 * @return
