@@ -1,4 +1,7 @@
 package goosegame;
+
+import cells.Cell;
+
 /** A player in the "jeu de l'oie" game */
 public class Player {
     /** current cell of the player */
