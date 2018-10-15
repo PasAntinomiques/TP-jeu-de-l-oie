@@ -40,11 +40,22 @@ public class StartCell implements Cell {
 
 	@Override
 	public void welcomePlayer(Player player) {
+		player.setCell(this);
 	}
 
 	@Override
 	public Player getPlayer() {
 		return null;
+	}
+
+	@Override
+	public void leave(Player player) {
+		
+	}
+
+	@Override
+	public void nextTurn() {
+		
 	}
 
 }

@@ -23,21 +23,15 @@ public class WaitCell extends NormalCell {
 		this.timer = 0;
 	}
 	
-	/* (non-Javadoc)
-	 * @see cells.NormalCell#welcomePlayer(goosegame.Player)
-	 */
 	@Override
 	public void welcomePlayer(Player newPlayer) {
 		super.welcomePlayer(newPlayer);
 		this.timer = 0;
 	}
 	
-	/* (non-Javadoc)
-	 * @see cells.NormalCell#canBeLeft()
-	 */
 	@Override
 	public boolean canBeLeft() {
-		return this.timer > this.timeToWait;
+		return this.timer >= this.timeToWait;
 	}
 	
 	@Override
