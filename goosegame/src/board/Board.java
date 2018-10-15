@@ -1,13 +1,16 @@
-package goosegame;
+package board;
 
 import cells.Cell;
 
 public abstract class Board {
-	private final int nbOfCells;
-	Cell theCells;
+	
+	protected final int nbOfCells;
+	protected Cell[] theCells;
 	
 	public Board(int nbOfCells) {
 		this.nbOfCells = nbOfCells;
+		theCells = new Cell[nbOfCells];
+		this.initBoard();
 	}
 	
 	/**
@@ -28,7 +31,7 @@ public abstract class Board {
 	/**
 	 * @return
 	 */
-	public Cell getTheCells() {
+	public Cell[] getTheCells() {
 		return theCells;
 	}
 	
