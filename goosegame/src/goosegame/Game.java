@@ -2,6 +2,8 @@ package goosegame;
 
 import java.util.ArrayList;
 
+import board.Board;
+
 public class Game {
 
 	private ArrayList<Player> thePlayers;

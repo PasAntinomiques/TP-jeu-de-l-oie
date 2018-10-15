@@ -36,7 +36,6 @@ public class WaitCell extends NormalCell {
 	 */
 	@Override
 	public boolean canBeLeft() {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
