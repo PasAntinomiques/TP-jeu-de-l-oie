@@ -56,6 +56,10 @@ public class NormalCell implements Cell {
 		this.player.setCell(null);
 		this.player = null;
 	}
+
+	@Override
+	public void nextTurn() {	
+	}
 	
 
 }

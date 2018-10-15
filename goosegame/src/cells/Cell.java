@@ -42,6 +42,11 @@ public interface Cell {
 	 * @param player : the player leaving
 	 */
 	public void leave(Player player);
+	
+	/**
+	 * Notifies the cell the game passes to a new turn
+	 */
+	public void nextTurn();
 
 	/** gets the player in this cell <tt>null</tt> if none */
 	public Player getPlayer();

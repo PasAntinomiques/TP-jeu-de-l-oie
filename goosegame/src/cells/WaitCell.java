@@ -17,18 +17,19 @@ public class WaitCell extends NormalCell {
 	/**
 	 * @param index the index of the cell
 	 */
-	public WaitCell(int index) {
+	public WaitCell(int index,int timeToWait) {
 		super(index);
-		// TODO Auto-generated constructor stub
+		this.timeToWait = timeToWait;
+		this.timer = 0;
 	}
 	
 	/* (non-Javadoc)
 	 * @see cells.NormalCell#welcomePlayer(goosegame.Player)
 	 */
 	@Override
-	public void welcomePlayer(Player player) {
-		// TODO Auto-generated method stub
-		
+	public void welcomePlayer(Player newPlayer) {
+		super.welcomePlayer(newPlayer);
+		this.timer = 0;
 	}
 	
 	/* (non-Javadoc)
@@ -36,7 +37,12 @@ public class WaitCell extends NormalCell {
 	 */
 	@Override
 	public boolean canBeLeft() {
-		return false;
+		return this.timer > this.timeToWait;
+	}
+	
+	@Override
+	public void nextTurn() {	
+		this.timer += 1;
 	}
 
 }
