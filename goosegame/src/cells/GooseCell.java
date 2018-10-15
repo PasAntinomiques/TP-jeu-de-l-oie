@@ -8,6 +8,6 @@ public class GooseCell extends NormalCell {
 	
 	@Override
 	public int handleMove(int diceThrow) {
-		return 0;
+		return this.index + diceThrow;
 	}
 }

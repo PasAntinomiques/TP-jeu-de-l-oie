@@ -12,32 +12,53 @@ public class NormalCell implements Cell {
 
 	@Override
 	public boolean canBeLeft() {
-		return false;
+		return true;
 	}
 
 	@Override
 	public int getIndex() {
-		return 0;
+		return this.index;
 	}
 
 	@Override
 	public int handleMove(int diceThrow) {
-		return 0;
+		return this.index;
 	}
 
 	@Override
 	public boolean isBusy() {
-		return false;
+		return ! (this.player == null);
 	}
 
 	@Override
-	public void welcomePlayer(Player player) {
+	public void welcomePlayer(Player newPlayer) {
+		Player currentPlayer = this.player;
+		Cell prevCell = newPlayer.getCell();
 		
+		prevCell.leave(newPlayer);
+		if(currentPlayer != null) {
+			this.leave(currentPlayer);
+			prevCell.welcomePlayer(currentPlayer);
+		}
+		this.player = newPlayer;
+		newPlayer.setCell(this);
 	}
+	
 
 	@Override
 	public Player getPlayer() {
-		return null;
+		return this.player;
+	}
+
+	@Override
+	public void leave(Player player) {
+		assert player == this.player; //you can't leave if you're not here
+		this.player.setCell(null);
+		this.player = null;
+	}
+
+	@Override
+	public void nextTurn() {	
 	}
 	
 

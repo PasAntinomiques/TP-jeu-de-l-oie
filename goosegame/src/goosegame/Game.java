@@ -35,9 +35,9 @@ public class Game {
 		
 		// score = 1d6
 		// intermediary <- calculated cell
-		// target <- inter.handleMove(score) ( verif excess)
-		// if cell ocupied : move the other player
-		// move player to target
+		// target <- inter.handleMove(score) 
+		// ( verif excess)
+		// move welcome player to target
 		
 		// end if
 		// player <- next player
