@@ -20,6 +20,19 @@ public class Game {
 	 * Do an entire game
 	 */
 	public void play() {
+		// player <- first player
+		// WHILE : game not finished :
 		
+		// IF player can play :
+		
+		// score = 1d6
+		// intermediary <- calculated cell
+		// target <- inter.handleMove(score) ( verif excess)
+		// if cell ocupied : move the other player
+		// move player to target
+		
+		// end if
+		// player <- next player
+		// end while
 	}
 }

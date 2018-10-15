@@ -26,7 +26,7 @@ public interface Cell {
      */
 	public int handleMove(int diceThrow);
 
-	/** returns <tt>true</tt> iff a player is in this cell */
+	/** returns <tt>true</tt> if a player is in this cell */
 	public boolean isBusy();
 
 	 /**  handles what happens when a player arrives in this cell 
