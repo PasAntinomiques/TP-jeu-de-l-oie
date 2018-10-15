@@ -40,14 +40,14 @@ public class Player {
     /** result of a 1d6 throw
      * @return random result of a 1d6 throw 
     */
-    private int oneDieThrow() {	
+    private int oneDiceThrow() {	
        return ((int) (Math.random()*10000) % 6)+ 1; 
     }
     /** result of a 2d6 throw 
       * @return random result of a 2d6 throw
     */ 	
     public int twoDiceThrow() {
-        int result = oneDieThrow() + oneDieThrow();
+        int result = oneDiceThrow() + oneDiceThrow();
         return result;
     }
 }// Player

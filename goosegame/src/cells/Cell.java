@@ -33,9 +33,15 @@ public interface Cell {
 	public boolean isBusy();
 
 	 /**  handles what happens when a player arrives in this cell 
-     * @param player the new player in the sell
+     * @param player the new player in the cell
      */
 	public void welcomePlayer(Player player);
+	
+	/**
+	 * Handles a player leaving a cell
+	 * @param player : the player leaving
+	 */
+	public void leave(Player player);
 
 	/** gets the player in this cell <tt>null</tt> if none */
 	public Player getPlayer();
