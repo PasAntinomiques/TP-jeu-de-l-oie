@@ -50,4 +50,6 @@ public interface Cell {
 
 	/** gets the player in this cell <tt>null</tt> if none */
 	public Player getPlayer();
+	
+	public String toString();
 }// Cell

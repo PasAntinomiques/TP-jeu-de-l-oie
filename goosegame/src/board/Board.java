@@ -6,15 +6,19 @@ public abstract class Board {
 	
 	protected final int nbOfCells;
 	protected Cell[] theCells;
+	protected Cell startCell;
 	protected Cell endCell;
 	
 	public Cell getEndCell() {
 		return endCell;
 	}
+	public Cell getStartCell() {
+		return startCell;
+	}
 
 	public Board(int nbOfCells) {
-		this.nbOfCells = nbOfCells;
-		theCells = new Cell[nbOfCells];
+		this.nbOfCells = nbOfCells + 1;
+		theCells = new Cell[nbOfCells + 1];
 		this.initBoard();
 	}
 	
@@ -24,9 +28,7 @@ public abstract class Board {
 	/**
 	 * 
 	 */
-	protected void initBoard() {
-		
-	}
+	protected abstract void initBoard();
 
 	/**
 	 * @return
@@ -51,6 +53,8 @@ public abstract class Board {
 			c.nextTurn();
 		}
 	}
+
+	
 	
 	
 }

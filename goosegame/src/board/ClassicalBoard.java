@@ -15,9 +15,10 @@ public class ClassicalBoard extends Board {
 	}
 	
 	protected void initBoard() {
-		this.theCells = new Cell[nbOfCells];
+		//this.theCells = new Cell[nbOfCells];
 		this.theCells[0] = new StartCell(0);
-		for(int i = 1; i <= nbOfCells; i++) {
+		this.startCell = this.theCells[0];
+		for(int i = 1; i < nbOfCells; i++) {
 			
 			//Goose cells
 			if(i == 9 || i == 18 || i == 27 ||i == 36 || i == 45 
@@ -49,4 +50,5 @@ public class ClassicalBoard extends Board {
 		}
 		this.endCell = new NormalCell(63);
 	}
+	
 }
