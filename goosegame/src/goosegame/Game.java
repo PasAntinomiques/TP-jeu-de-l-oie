@@ -52,7 +52,7 @@ public class Game {
 			p = it.next();
 			
 			int score = p.twoDiceThrow();
-			System.out.println("It's " + p +"'s turn ("+ p.getCell() + ",dice:"+score+")");
+			System.out.println("It's " + p +"'s turn ("+ p.getCell() + ",rolled:"+score+")");
 			
 			if(p.getCell().canBeLeft()) {
 
