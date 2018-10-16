@@ -53,7 +53,6 @@ public class NormalCell implements Cell {
 	@Override
 	public void leave(Player player) {
 		assert player == this.player; //you can't leave if you're not here
-		this.player.setCell(null);
 		this.player = null;
 	}
 

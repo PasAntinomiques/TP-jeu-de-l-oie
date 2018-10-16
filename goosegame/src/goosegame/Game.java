@@ -56,10 +56,12 @@ public class Game {
 			if(p.getCell().canBeLeft()) {
 
 				int score = p.twoDiceThrow();
-				Cell intermediary = board.getCell(score + p.getCell().getIndex());
+				int intermediary_index = score + p.getCell().getIndex();
+				if(intermediary_index > end_index) intermediary_index = end_index - (intermediary_index - end_index);
+				Cell intermediary = board.getCell(intermediary_index);
+				
 				int land = intermediary.handleMove(score);
-				if(land > end_index)
-					land = end_index - (land - end_index);
+				if(land > end_index) land = end_index - (land - end_index);
 				board.getCell(land).welcomePlayer(p);
 
 				// test if the game is finished
