@@ -51,11 +51,12 @@ public class Game {
 			}
 			p = it.next();
 			
-			System.out.println("It's " + p +"'s turn (he is at "+ p.getCell() + " )");
+			int score = p.twoDiceThrow();
+			System.out.println("It's " + p +"'s turn ("+ p.getCell() + ",dice:"+score+")");
 			
 			if(p.getCell().canBeLeft()) {
 
-				int score = p.twoDiceThrow();
+				
 				int intermediary_index = score + p.getCell().getIndex();
 				if(intermediary_index > end_index) intermediary_index = end_index - (intermediary_index - end_index);
 				Cell intermediary = board.getCell(intermediary_index);
@@ -65,7 +66,8 @@ public class Game {
 				board.getCell(land).welcomePlayer(p);
 
 				// test if the game is finished
-				if (p.getCell().equals(board.getEndCell())) {
+				if (p.getCell().getIndex() == end_index) {
+					System.out.print(p + " has reached the END !");
 					finished = true;
 				}
 			}

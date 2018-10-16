@@ -61,7 +61,7 @@ public class NormalCell implements Cell {
 	}
 	
 	public String toString() {
-		return this.getClass().getSimpleName() + "( "+this.getIndex()+" )";
+		return this.getClass().getSimpleName() + "("+this.getIndex()+")";
 	}
 
 }
