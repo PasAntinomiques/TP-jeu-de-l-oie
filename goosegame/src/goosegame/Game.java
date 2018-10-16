@@ -53,7 +53,7 @@ public class Game {
 			p = it.next();
 			
 			System.out.print("It's " + p +"'s turn at " + p.getCell());
-			
+			 
 			if(p.getCell().canBeLeft()) {
 				
 				int score = p.twoDiceThrow();
