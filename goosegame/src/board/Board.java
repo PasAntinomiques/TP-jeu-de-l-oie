@@ -46,5 +46,11 @@ public abstract class Board {
 		return this.theCells[i];
 	}
 	
+	public void nextTurn() {
+		for(Cell c : this.theCells) {
+			c.nextTurn();
+		}
+	}
+	
 	
 }

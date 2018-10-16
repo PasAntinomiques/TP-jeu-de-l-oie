@@ -34,22 +34,27 @@ public class Game {
 		Iterator<Player> it = this.thePlayers.iterator();
 		Player p;
 		while(!finished) {
+			
 			if (!it.hasNext()) {
 				it = this.thePlayers.iterator();
-				//Next turn
+				board.nextTurn();
 			}
 			p = it.next();
+			
 			if(p.getCell().canBeLeft()) {
+
 				int score = p.twoDiceThrow();
 				Cell intermediary = board.getCell(score + p.getCell().getIndex());
 				int land = intermediary.handleMove(score);
 
 
-				// if the game is finished
+				// test if the game is finished
 				if (p.getCell().equals(board.getEndCell())) {
 					finished = true;
-					break;
 				}
+				
+				
+				
 			}
 
 			// ( verif excess)
