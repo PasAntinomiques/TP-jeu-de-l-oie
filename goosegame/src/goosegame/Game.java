@@ -54,7 +54,7 @@ public class Game {
 			System.out.println("It's " + p +"'s turn (he is at "+ p.getCell() + " )");
 			
 			if(p.getCell().canBeLeft()) {
-
+				
 				int score = p.twoDiceThrow();
 				int intermediary_index = score + p.getCell().getIndex();
 				if(intermediary_index > end_index) intermediary_index = end_index - (intermediary_index - end_index);
