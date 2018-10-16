@@ -33,7 +33,7 @@ public class Game {
 	public void play() {
 		boolean finished = false;
 		
-		System.out.print("The game is starting with :");
+		System.out.println("The game is starting with :");
 		for(Player p : this.thePlayers) System.out.println(p);
 		
 		Iterator<Player> it = this.thePlayers.iterator();
@@ -57,7 +57,7 @@ public class Game {
 			if(p.getCell().canBeLeft()) {
 				
 				int score = p.twoDiceThrow();
-				System.out.print(" ,he rolled a "+score);
+				System.out.print(", he rolled a "+score);
 				
 				int intermediary_index = score + p.getCell().getIndex();
 				if(intermediary_index > end_index) intermediary_index = end_index - (intermediary_index - end_index);
