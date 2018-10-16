@@ -48,6 +48,7 @@ public class Player {
     */ 	
     public int twoDiceThrow() {
         int result = oneDiceThrow() + oneDiceThrow();
+        System.out.println(this.toString() + " rolled " + Integer.toString(result));
         return result;
     }
 }// Player
