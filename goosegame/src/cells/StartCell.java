@@ -40,7 +40,8 @@ public class StartCell implements Cell {
 
 	@Override
 	public void welcomePlayer(Player player) {
-		player.getCell().leave(player);
+		if(player.getCell()!=null)
+			player.getCell().leave(player);
 		player.setCell(this);
 	}
 
