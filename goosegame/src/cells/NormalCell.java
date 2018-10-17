@@ -35,7 +35,7 @@ public class NormalCell implements Cell {
 		Player currentPlayer = this.player;
 		Cell prevCell = newPlayer.getCell();
 		
-		prevCell.leave(newPlayer);
+		if(prevCell != null) prevCell.leave(newPlayer);
 		if(currentPlayer != null) {
 			this.leave(currentPlayer);
 			prevCell.welcomePlayer(currentPlayer);
