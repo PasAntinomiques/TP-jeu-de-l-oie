@@ -1,6 +1,5 @@
 package board;
 
-import cells.Cell;
 import cells.GooseCell;
 import cells.NormalCell;
 import cells.StartCell;
@@ -10,10 +9,16 @@ import cells.WaitCell;
 
 public class ClassicalBoard extends Board {
 
-	public ClassicalBoard(int nbOfCells) {
-		super(nbOfCells);
+	/**
+	 * Create a board with 63 cells plus the start cell
+	 */
+	public ClassicalBoard() {
+		super(63);
 	}
 	
+	/* (non-Javadoc)
+	 * @see board.Board#initBoard()
+	 */
 	protected void initBoard() {
 		//this.theCells = new Cell[nbOfCells];
 		this.theCells[0] = new StartCell(0);

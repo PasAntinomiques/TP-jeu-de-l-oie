@@ -11,18 +11,27 @@ import goosegame.Player;
 
 public class TrapCellTest {
 
+	/**
+	 * test if the trap can be left
+	 */
 	@Test
 	public void testCanBeLeft() {
 		TrapCell c = new TrapCell(1);
 		assertTrue(! c.canBeLeft());
 	}
 
+	/**
+	 * test if when the player land on a trap cell where he goes
+	 */
 	@Test
 	public void testHandleMove() {
 		TrapCell c = new TrapCell(4);
 		assertTrue(4 == c.handleMove(8));
 	}
 
+	/**
+	 * test if busy == there is a player here
+	 */
 	@Test
 	public void testIsBusy() {
 		TrapCell c = new TrapCell(1);

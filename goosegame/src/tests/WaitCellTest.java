@@ -11,6 +11,9 @@ import goosegame.Player;
 
 public class WaitCellTest {
 
+	/**
+	 * test if the wait cell can be left
+	 */
 	@Test
 	public void testCanBeLeft() {
 		WaitCell c = new WaitCell(1,1);
@@ -19,6 +22,9 @@ public class WaitCellTest {
 		assertTrue(c.canBeLeft());
 	}
 
+	/**
+	 * test if the when the player arrives on a cell (even when there is already a player in it)
+	 */
 	@Test
 	public void testWelcomePlayer() {
 		Player p = new Player("name");
@@ -32,12 +38,18 @@ public class WaitCellTest {
 	}
 
 
+	/**
+	 * verify that you can move
+	 */
 	@Test
 	public void testHandleMove() {
 		WaitCell c = new WaitCell(4,2);
 		assertTrue(4 == c.handleMove(8));
 	}
 
+	/**
+	 * verify that when a player is on a cell the cell is busy
+	 */
 	@Test
 	public void testIsBusy() {
 		WaitCell c = new WaitCell(1,1);

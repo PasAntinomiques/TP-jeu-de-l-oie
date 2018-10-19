@@ -4,9 +4,13 @@ import board.ClassicalBoard;
 
 public class Main {
 
+	/**
+	 * Create a game with 4 players with the classical board
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		
-		ClassicalBoard classic_board = new ClassicalBoard(63);
+		ClassicalBoard classic_board = new ClassicalBoard();
 		Game game = new Game(classic_board);
 		
 		Player p1 = new Player("Bob");
