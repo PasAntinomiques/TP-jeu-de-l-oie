@@ -5,7 +5,6 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 import cells.StartCell;
-import cells.TeleportCell;
 import cells.TrapCell;
 import goosegame.Player;
 
