@@ -26,7 +26,7 @@ public class StartCellTest {
 		c.welcomePlayer(p);
 		assertTrue(p.getCell() == c);
 		//assertTrue(c.getPlayer() == p); we don't care about that at all
-		assertTrue(cn.getPlayer() == null);
+		assertTrue(cn.getPlayers().size() == 0);
 	}
 
 

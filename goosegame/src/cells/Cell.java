@@ -1,10 +1,11 @@
 package cells;
 
+import java.util.List;
+
 import goosegame.Player;
 
 /**
- * Interface for the cells of the "jeu de l'oie" game. <br/> Note that there can be only 
- * one player by cell, the starting cell (index 0) excepted.
+ * Interface for the cells of the "jeu de l'oie" game. 
  */
 public interface Cell {
 	
@@ -15,7 +16,8 @@ public interface Cell {
 	 */
 	public boolean canBeLeft();
 
-	/** returns the index of this cell */
+	/** returns the index of this cell
+	 * @return the index of the cell */
 	public int getIndex();
 
 	  /**
@@ -29,7 +31,8 @@ public interface Cell {
      */
 	public int handleMove(int diceThrow);
 
-	/** returns <tt>true</tt> if a player is in this cell */
+	/** returns <tt>true</tt> if a player is in this cell 
+	 * @return if the cell is busy*/
 	public boolean isBusy();
 
 	 /**  handles what happens when a player arrives in this cell 
@@ -48,8 +51,9 @@ public interface Cell {
 	 */
 	public void nextTurn();
 
-	/** gets the player in this cell <tt>null</tt> if none */
-	public Player getPlayer();
+	/** gets the player in this cell <tt>null</tt> if none
+	 * @return list of current players in the cell */
+	public List<Player> getPlayers();
 	
 	public String toString();
 }// Cell

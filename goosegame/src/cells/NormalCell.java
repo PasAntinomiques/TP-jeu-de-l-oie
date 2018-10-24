@@ -1,5 +1,8 @@
 package cells;
 
+import java.util.LinkedList;
+import java.util.List;
+
 import goosegame.Player;
 
 public class NormalCell implements Cell {
@@ -66,8 +69,11 @@ public class NormalCell implements Cell {
 	 * @see cells.Cell#getPlayer()
 	 */
 	@Override
-	public Player getPlayer() {
-		return this.player;
+	public List<Player> getPlayers() {
+		List<Player> list = new LinkedList<Player>();
+		if(this.player != null)
+			list.add(this.player);
+		return list ;
 	}
 
 	/* (non-Javadoc)

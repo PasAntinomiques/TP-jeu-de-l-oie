@@ -39,8 +39,8 @@ public class TeleportCellTest {
 		c0.welcomePlayer(p);
 		c1.welcomePlayer(p);
 		assertTrue(p.getCell() == c1);
-		assertTrue(c1.getPlayer() == p);
-		assertTrue(c0.getPlayer() == null);
+		assertTrue(c1.getPlayers().contains(p));
+		assertTrue(c0.getPlayers().size() == 0);
 	}
 
 	@Test
@@ -49,9 +49,9 @@ public class TeleportCellTest {
 		TeleportCell c = new TeleportCell(0,10);
 		p = new Player("name");
 		c.welcomePlayer(p);
-		assertTrue(c.getPlayer() == p);
+		assertTrue(c.getPlayers().contains(p));
 		c.leave(p);
-		assertTrue(c.getPlayer() == null);
+		assertTrue(c.getPlayers().size() == 0);
 	}
 
 }

@@ -51,7 +51,7 @@ public abstract class Board {
 	}
 	
 	/**
-	 * @param i 
+	 * @param i index
 	 * @return the i_th cells of the game
 	 */
 	public Cell getCell(int i) {

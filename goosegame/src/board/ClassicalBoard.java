@@ -1,5 +1,6 @@
 package board;
 
+import cells.BigCell;
 import cells.GooseCell;
 import cells.NormalCell;
 import cells.StartCell;
@@ -48,6 +49,8 @@ public class ClassicalBoard extends Board {
 			else if (i == 58) {
 				this.theCells[i] = new TeleportCell(i, 1);
 			}
+			else if(i == 10 || i == 20 || i == 30 ) 
+				this.theCells[i] = new BigCell(i,2);
 			//Normal cells
 			else {
 				this.theCells[i] = new NormalCell(i);

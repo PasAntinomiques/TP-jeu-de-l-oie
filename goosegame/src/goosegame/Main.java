@@ -6,7 +6,7 @@ public class Main {
 
 	/**
 	 * Create a game with 4 players with the classical board
-	 * @param args
+	 * @param args args
 	 */
 	public static void main(String[] args) {
 		

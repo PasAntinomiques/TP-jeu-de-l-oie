@@ -48,8 +48,8 @@ public class TrapCellTest {
 		c0.welcomePlayer(p);
 		c1.welcomePlayer(p);
 		assertTrue(p.getCell() == c1);
-		assertTrue(c1.getPlayer() == p);
-		assertTrue(c0.getPlayer() == null);
+		assertTrue(c1.getPlayers().contains(p));
+		assertTrue(c0.getPlayers().size() == 0);
 	}
 
 }

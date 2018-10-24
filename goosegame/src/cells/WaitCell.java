@@ -16,6 +16,7 @@ public class WaitCell extends NormalCell {
 	
 	/**
 	 * @param index the index of the cell
+	 * @param timeToWait the time to wait in the cell
 	 */
 	public WaitCell(int index,int timeToWait) {
 		super(index);
