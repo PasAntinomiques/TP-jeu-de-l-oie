@@ -34,8 +34,11 @@ public class Player {
     /** changes the cell of the player 
      * @param newCell the new cell
     */
-    public void setCell(Cell newCell) { 
-       this.cell = newCell; 
+    public void setCell(Cell newCell) {
+    	if(this.cell != null) {
+    		this.cell.leave(this);
+    	}
+    	this.cell = newCell; 
     }    
     /** result of a 1d6 throw
      * @return random result of a 1d6 throw 
